@@ -19,7 +19,7 @@ class Cli
   end
 
   def self.run
-    # Splash.start
+    Splash.start
     Scraper.menu
     Splash.trailing
     interaction
