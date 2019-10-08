@@ -1,6 +1,6 @@
 class Special
   def self.slowly
-    yield.each_char { |c| putc c; $stdout.flush; sleep 0.15 }
+    yield.each_char { |c| putc c; $stdout.flush; sleep 0.10 }
   end
 
   def self.alert

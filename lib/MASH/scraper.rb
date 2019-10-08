@@ -1,4 +1,3 @@
-require 'pry'
 require 'open-uri'
 require 'nokogiri'
 require 'colorize'
@@ -220,7 +219,7 @@ class Scraper
     bio1 = DOC.css('#mw-content-text > div > p:nth-child(74)').text.gsub(/["\"","\n"]/, '').gsub(/\[\d\]/, '')
     bio2 = DOC.css('#mw-content-text > div > p:nth-child(75)').text.gsub(/["\"","\n"]/, '').gsub(/\[\d\]/, '')
     bio3 = DOC.css('#mw-content-text > div > p:nth-child(76)').text.gsub(/["\"","\n"]/, '').gsub(/\[\d\]/, '')
-    bio4 = DOC.css('#mw-content-text > div > p:nth-child(78)').text.gsub(/["\"","\n"]/, '').gsub(/\[\d\]/, '')
+    bio4 = DOC.css('#mw-content-text > div > p:nth-child(77)').text.gsub(/["\"","\n"]/, '').gsub(/\[\d\]/, '')
     bio = [bio1, bio2, bio3, bio4]
     puts "     #{name}".colorize(:green)
     puts '     ----------'.colorize(:green)

@@ -1,4 +1,8 @@
-require 'require_all'
-require_all 'lib'
+#!usr/bin/env ruby
+
+require "bundler/setup"
+require "MASH"
+
+# require_all 'lib'
 
 Cli.run
