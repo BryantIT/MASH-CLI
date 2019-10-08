@@ -12,6 +12,8 @@ class Scraper
       puts "  #{index}. #{name}".colorize(:green)
     end
   end
+
+
   # name:.text.gsub("[edit]","")
   # bio:.text.gsub(/["\"","\n"]/,"").gsub(/\[\d\]/,"")
 

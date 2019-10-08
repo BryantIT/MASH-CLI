@@ -22,7 +22,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Begin the CLI with "ruby best_help_anywhere"
 
 ## Development
 
