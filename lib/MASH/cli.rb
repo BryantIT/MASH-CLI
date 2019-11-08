@@ -1,20 +1,22 @@
+# frozen_string_literal: true
+
 require 'colorize'
 
 class Cli
   def self.interaction
-    print ":/"
+    print ':/'
     input = gets.chomp
 
-  if input == "exit"
+    if input == 'exit'
       exit
-  elsif input.to_i < 1 || input.to_i > 12
+    elsif input.to_i < 1 || input.to_i > 12
       Special.alert
       Scraper.menu
       Splash.trailing
       interaction
-  else
+    else
       Roster.roster(input.to_i)
-    end
+      end
   end
 
   def self.run

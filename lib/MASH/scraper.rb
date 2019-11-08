@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'open-uri'
 require 'nokogiri'
 require 'colorize'
@@ -12,7 +14,6 @@ class Scraper
       puts "  #{index}. #{name}".colorize(:green)
     end
   end
-
 
   # name:.text.gsub("[edit]","")
   # bio:.text.gsub(/["\"","\n"]/,"").gsub(/\[\d\]/,"")
@@ -335,10 +336,10 @@ class Scraper
 
   def self.duke
     name = DOC.css('#mw-content-text > div > h3:nth-child(108)').text.gsub('[edit]', '')
-    bio1 = DOC.css('#mw-content-text > div > p:nth-child(110)').text.gsub(/["\"","\n"]/, '').gsub(/\[\d\]/, '').gsub(/\bcitation needed\b/, "")
-    bio2 = DOC.css('#mw-content-text > div > p:nth-child(111)').text.gsub(/["\"","\n"]/, '').gsub(/\[\d\]/, '').gsub(/\bcitation needed\b/, "")
-    bio3 = DOC.css('#mw-content-text > div > p:nth-child(112)').text.gsub(/["\"","\n"]/, '').gsub(/\[\d\]/, '').gsub(/\bcitation needed\b/, "")
-    bio4 = DOC.css('#mw-content-text > div > p:nth-child(113)').text.gsub(/["\"","\n"]/, '').gsub(/\[\d\]/, '').gsub(/\bcitation needed\b/, "")
+    bio1 = DOC.css('#mw-content-text > div > p:nth-child(110)').text.gsub(/["\"","\n"]/, '').gsub(/\[\d\]/, '').gsub(/\bcitation needed\b/, '')
+    bio2 = DOC.css('#mw-content-text > div > p:nth-child(111)').text.gsub(/["\"","\n"]/, '').gsub(/\[\d\]/, '').gsub(/\bcitation needed\b/, '')
+    bio3 = DOC.css('#mw-content-text > div > p:nth-child(112)').text.gsub(/["\"","\n"]/, '').gsub(/\[\d\]/, '').gsub(/\bcitation needed\b/, '')
+    bio4 = DOC.css('#mw-content-text > div > p:nth-child(113)').text.gsub(/["\"","\n"]/, '').gsub(/\[\d\]/, '').gsub(/\bcitation needed\b/, '')
     bio = [bio1, bio2, bio3, bio4]
     puts "     #{name}".colorize(:green)
     puts '     ----------'.colorize(:green)

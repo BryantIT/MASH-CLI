@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Splash < Special
   def self.start
     banner
